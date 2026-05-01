@@ -1,0 +1,154 @@
+:root {
+    --bg: #f4f7fc;
+    --card: #ffffff;
+    --text: #222831;
+    --muted: #606f7b;
+    --primary: #2978b5;
+    --secondary: #4b6584;
+    --success: #2dce89;
+    --danger: #e55039;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body.dark {
+    --bg: #12181f;
+    --card: #1e2a38;
+    --text: #f5f7fa;
+    --muted: #9aa5b1;
+    --primary: #6bc1ff;
+    --secondary: #8ea7bc;
+    --success: #3ddb99;
+    --danger: #ff725e;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    padding: 1.7rem;
+    margin-bottom: 1.6rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    margin-top: 0.4rem;
+    border-radius: 12px;
+    border: 1px solid #d9e2ec;
+    background: #f9fbff;
+    color: var(--text);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.inline-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.inline-form input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    background: #eef2f7;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.status,
+.feedback {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.25rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 0 1rem 2rem;
+}
+
+@media (max-width: 640px) {
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

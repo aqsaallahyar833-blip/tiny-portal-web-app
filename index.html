@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TinyPortal</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="app-header">
+        <h1>TinyPortal</h1>
+        <button id="themeToggle" class="btn btn-secondary">Toggle Theme</button>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Contact Form</h2>
+            <p>Fill in the fields and click Submit. The app validates the form and displays your message.</p>
+            <form id="contactForm" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required minlength="2" placeholder="Enter your name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required minlength="10"
+                    placeholder="Write your message"></textarea>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div id="formFeedback" class="feedback"></div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Dynamic Features</h2>
+            <p>Add, update, and remove items from the list below.</p>
+            <div class="inline-form">
+                <input id="newItem" type="text" placeholder="New item name" />
+                <button id="addItem" class="btn btn-primary">Add Item</button>
+            </div>
+            <ul id="itemList" class="item-list"></ul>
+            <div id="listStatus" class="status"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
